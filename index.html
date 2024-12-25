@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Foxstrot - Explore Elegantly</title>
+    <style>
+        /* Base Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: rgba(17, 17, 17, 0.9);
+            padding: 15px 50px;
+            display: flex;
+            position: absolute;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+            header.hidden {
+                transform: translateY(-100%);
+            }
+
+        .logo {
+            height: 30px;
+        }
+
+        header nav a {
+            margin-left: 20px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s;
+            
+        }
+
+            header nav a:hover {
+                color: #bbb;
+                cursor:not-allowed;
+            }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100vh;
+            /* background: linear-gradient(to bottom, #000, #111);*/
+            background-color: black;
+        }
+
+            .hero h1 {
+                font-size: 3.5rem;
+                margin-bottom: 20px;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+                margin-bottom: 40px;
+                max-width: 600px;
+                color: #ccc;
+            }
+
+            .hero button {
+                padding: 15px 30px;
+                font-size: 1rem;
+                color: #000;
+                background: #fff;
+                border: none;
+                border-radius: 25px;
+                cursor: pointer;
+                transition: transform 0.3s ease, background 0.3s ease;
+            }
+
+                .hero button:hover {
+                    background: #bbb;
+                    transform: scale(1.05);
+                }
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px;
+            background: black;
+        }
+
+            .section:nth-child(even) {
+                background: #000;
+            }
+
+            .section h2 {
+                font-size: 2.5rem;
+                margin-bottom: 20px;
+            }
+
+            .section p {
+                font-size: 1.1rem;
+                max-width: 800px;
+                color: #bbb;
+            }
+
+        .container {
+            padding: 80px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .card {
+            background: #111;
+            border: 1px solid #444;
+            border-radius: 15px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+            .card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+            }
+
+            .card h2 {
+                font-size: 1.5rem;
+                margin-bottom: 15px;
+                color: #fff;
+            }
+
+            .card p {
+                font-size: 1rem;
+                color: #bbb;
+            }
+            #lis {
+                position: absolute;
+                height: 350px;
+                z-index: 100000;
+                top: 30px;
+                left: 600px;
+
+            }
+
+        #top {
+            scroll-behavior: smooth;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        footer {
+            background: #111;
+            padding: 20px;
+            text-align: center;
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+
+            footer a {
+                color: #fff;
+                text-decoration: none;
+            }
+
+                footer a:hover {
+                    text-decoration: underline;
+                }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <img id="lis" src="whitefoxstrotnobackground.png"/>
+    <header id="main-header">
+        <div style="position: relative; height: 50px;"  alt="FoxVerse Logo" class="logo">  </div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome To Foxstrot AI Agent</h1>
+        <p>Your own AI agent who'll do research of any token on pump.fun</p>
+        <button id="getstartBut" onclick="window.location.href='https://t.me/foxstrotAIbot';">Get Started</button>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <h2>About Us</h2>
+        <p>We are a team that makes products from 2022 based on artificial intelligence and technologies.</p>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="features">
+        <h2>Features</h2>
+        <p>Now we are only at the development stage in the future but we want to make an absolutely unique technology that will help create other AI agents and allow them to communicate with each other, thereby becoming smarter ^_^ hell yeah.</p>
+    </section>
+
+    <div class="container" id="about"> 
+    <div class="card"> 
+        <h2>Our Mission</h2> 
+        <p>Our goal is to make this world better and more technologically advanced based on AI agents.</p> 
+        </div> 
+    <div class="card"> 
+        <h2>What We Offer</h2> 
+        <p>Now we have a bot is available that sometimes works incorrectly but can already conduct token analysis on pump.fun IF THE BOT DOESN'T ANSWER YOU THIS DOESN'T MEAN THAT IT IS NOT WORKING BETTER TRY ASKING IT A QUESTION IN A DIFFERENT FORM.</p> 
+        </div> <div class="card"> <h2>Custom Experiences</h2> <p>We are offering a not entirely unique version of AI, but  in the fucking future we are going to develop it and make the product more extractive.</p> 
+             </div> </div> <!-- Features Section --> 
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Foxstrot. All rights reserved. | <a id="top" href="#lis">Back to Top</a></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+
+
+
+        const header = document.getElementById('main-header');
+        let lastScrollY = window.scrollY;
+
+        // При загрузке страницы прокручиваем её в самый верх
+ 
+
+        // Handle header visibility on scroll
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY) {
+                // Scrolling down
+                header.classList.add('hidden');
+            } else {
+                // Scrolling up
+                header.classList.remove('hidden');
+            }
+            lastScrollY = window.scrollY;
+        });
+    </script>
+</body>
+</html>
